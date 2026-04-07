@@ -117,7 +117,7 @@
 <div id="page-about" class="page">
   <div class="about-section">
     <h2>About this project</h2>
-    <p>The Presidential Coverage Tracker is a research project from the Yale Political Media Lab that measures the tone of Trump coverage across major US broadcast and cable news networks.</p>
+    <p>The Presidential Coverage Tracker is a research project from Yale political scientists that measures the tone of Trump coverage across major US broadcast and cable news networks.</p>
     <p>We collect closed-caption transcripts from the Internet Archive's TV News Archive, classify each Trump-mention segment using a fine-tuned natural language inference model, and publish weekly updates to this dashboard.</p>
     <h3>Data & Methodology</h3>
     <p>Each transcript is split into 3-sentence windows. Windows mentioning "Trump" are classified using the <a href="https://huggingface.co/mlburnham/Political_DEBATE_large_v1.0" target="_blank">Political DEBATE model</a> developed by Michael Burnham. A segment is classified as positive (+1) if the model scores the "performing well" hypothesis above 0.5, negative (−1) for "performing poorly," or neutral (0) otherwise.</p>
@@ -125,7 +125,7 @@
     <h3>Networks covered</h3>
     <p>CBS, CNN, Fox News, ABC, NBC, and MSNBC/MSNow. Data runs from January 2025 to the present and is updated weekly.</p>
     <h3>Contact</h3>
-    <p>For questions about the data or methodology, contact the Yale Political Media Lab.</p>
+    <p>For questions about the data or methodology, contact Kevin.DeLuca@yale.edu or zoe.kava@yale.edu.</p>
   </div>
 </div>
 
@@ -134,32 +134,21 @@ const posts = [
   {
     id: 1,
     date: "April 2026",
-    title: "Fox News and CNN diverge sharply on Trump coverage tone",
+    title: "Example Post 1",
     excerpt: "Since January 2025, Fox News segments mentioning Trump score a net +3.2%, while CNN scores -18.4%. We break down what's driving the gap.",
     tag: "Network analysis",
     content: `
-      <p>Since we began tracking in January 2025, the divergence between Fox News and CNN in their framing of Trump has been one of the most consistent findings in our data.</p>
-      <p>Fox News segments mentioning Trump score a net +3.2% on average — meaning slightly more positive than negative framing. CNN, by contrast, scores -18.4%, with negative framing far outweighing positive.</p>
-      <h3>What's driving the gap?</h3>
-      <p>The difference isn't just in tone — it's in which stories each network chooses to cover and how they frame Trump's actions. Fox tends to cover Trump in the context of policy achievements and contrast with opponents, while CNN's coverage focuses more heavily on legal and political challenges.</p>
-      <h3>MSNBC leads in negative coverage</h3>
-      <p>MSNBC/MSNow shows the most negative net score of any network in our dataset at -29.6%, consistent with its positioning as a liberal-leaning cable network. NBC broadcast news sits closer to neutral at -7.2%.</p>
-      <p>We'll continue tracking these trends as the news cycle evolves. Check the Network Comparison tab for the latest numbers.</p>
+
     `
   },
   {
     id: 2,
     date: "March 2026",
-    title: "Coverage volume spiked in January 2025 — then dropped off",
+    title: "Example post 2",
     excerpt: "Trump-mention segments peaked in the weeks following the inauguration, reaching over 5,000 per week across all networks. We look at what happened next.",
     tag: "Coverage trends",
     content: `
-      <p>The first two weeks of January 2025 saw the highest volume of Trump-mention segments in our dataset — over 5,000 per week across all networks combined. This coincided with pre-inauguration coverage and the first days of the new administration.</p>
-      <p>Coverage volume then declined through the spring, stabilizing around 3,000-4,000 segments per week, before picking up again in the summer.</p>
-      <h3>What drives volume spikes?</h3>
-      <p>Short-term spikes tend to align with major news events — policy announcements, legal developments, and international incidents. The July 2025 spike, for example, coincided with several major foreign policy announcements.</p>
-      <p>Use the Weekly Trump Mention Count chart on the tracker to explore coverage volume patterns for each network.</p>
-    `
+     
   }
 ];
 
