@@ -356,8 +356,10 @@
       <p>We collect closed-caption transcripts from the Internet Archive's TV News Archive, classify each Trump-mention segment using a fine-tuned natural language inference model, and publish weekly updates to this dashboard.</p>
 
       <h3>Data & Methodology</h3>
-      <p>Each transcript is split into 3-sentence windows. Windows mentioning "Trump" are classified using the <a href="https://huggingface.co/mlburnham/Political_DEBATE_large_v1.0" target="_blank" rel="noopener noreferrer">Political DEBATE model</a> developed by Michael Burnham. A segment is classified as positive (+1) if the model scores the "performing well" hypothesis above 0.5, negative (-1) for "performing poorly," or neutral (0) otherwise.</p>
+      <p>Each transcript is split into 3-sentence windows. Windows mentioning "Trump" are classified using the <a href="https://huggingface.co/mlburnham/Political_DEBATE_large_v1.0" target="_blank" rel="noopener noreferrer">Political DEBATE model</a> developed by Michael Burnham. We further train the Political DEBATE model on a task that evaluates whether the text conveys a positive, negative, or neutral performance cue about Trump.</p>
+      <p>A segment is classified as positive if the model scores a "yes" on the hypothesis "the author of this text believes that Trump is performing/performed/will perform well" and negative if the model scores a "yes" on the hypothesis "the author of this text believes that Trump is performing/performed/will perform poorly."</p>
       <p>The weekly net score is computed as: % positive minus % negative chunks that week.</p>
+      <p>For more information about the methodology, including the assessment of the reliability and validity of our measure, please view our <a href="#" target="_blank">working paper</a>.</p>
 
       <h3>Networks covered</h3>
       <p>CBS, CNN, Fox News, ABC, NBC, and MSNBC/MSNow. Data runs from January 2025 to the present and is updated weekly.</p>
