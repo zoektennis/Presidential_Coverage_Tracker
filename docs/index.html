@@ -353,8 +353,8 @@
     <div class="about-section">
       <h2>About this project</h2>
       <p>The Presidential Coverage Tracker is a research project from Yale political scientists that measures the tone of presidential coverage across major US broadcast and cable news network and digital news outlets.</p>
-      <p>We collect closed-caption transcripts from the Internet Archive's TV News Archive, classify each Trump-mention segment using a fine-tuned natural language inference model, and publish weekly updates to this dashboard.</p>
-      <p>News headlines are collected from <a href="https://search.mediacloud.org" target="_blank" rel="noopener noreferrer">Media Cloud</a>, a global news database. Traditional methods of measuring media tone, including dictionary-based word counts and transformer-based sentiment classifiers, assign an overall positive, negative, or neutral score to a document rather than to the candidates it discusses. This document-level approach cannot identify to whom sentiment is directed. A headline such as 'Biden struggles to contain inflation' conveys a markedly different signal about the president than 'Inflation eases under Biden,' yet both might be treated as negative in a dictionary-based model that flags 'inflation' as a negative term. We adapt methods from natural language inference (NLI) to measure candidate-specific media coverage. Rather than inferring tone from surface-level word usage, our approach uses stance detection to evaluate whether a headline or transcript segment implies that a given candidate is performing well or poorly.</p>
+      <p>We collect closed-caption transcripts from the Internet Archive's TV News Archive, classify each Trump-mention segment using a fine-tuned natural language inference model, and publish weekly updates to this dashboard. News headlines are collected from <a href="https://search.mediacloud.org" target="_blank" rel="noopener noreferrer">Media Cloud</a>, a global news database.</p>
+      <p>Traditional methods of measuring media tone, including dictionary-based word counts and transformer-based sentiment classifiers, assign an overall positive, negative, or neutral score to a document rather than to the candidates it discusses. This document-level approach cannot identify to whom sentiment is directed. A headline such as 'Biden struggles to contain inflation' conveys a markedly different signal about the president than 'Inflation eases under Biden,' yet both might be treated as negative in a dictionary-based model that flags 'inflation' as a negative term. We adapt methods from natural language inference (NLI) to measure candidate-specific media coverage. Rather than inferring tone from surface-level word usage, our approach uses stance detection to evaluate whether a headline or transcript segment implies that a given candidate is performing well or poorly.</p>
      
       <h3>Data & Methodology</h3>
       <p>Each transcript is split into 3-sentence windows. Windows mentioning "Trump" are classified using the <a href="https://huggingface.co/mlburnham/Political_DEBATE_large_v1.0" target="_blank" rel="noopener noreferrer">Political DEBATE model</a> developed by Michael Burnham. We further train the Political DEBATE model on a task that evaluates whether the text conveys a positive, negative, or neutral performance cue about Trump.</p>
@@ -368,6 +368,9 @@
       <p> We include national broadcast and cable news programs only — no local affiliates or regional newscasts. For each network we selected flagship news, morning, evening, and primetime opinion programs that reach a national audience.</p>
       <h3>Contact</h3>
       <p>For questions about the data or methodology, contact Kevin.DeLuca@yale.edu or zoe.kava@yale.edu.</p>
+
+       <h3>Digital news outlets covered</h3>
+       <p> Reuters, Fox News, CBS News, Bloomberg, CNN, ABC News, USA Today, New York Times, NBC News, Los Angeles Times, and NPR. Headlines are collected via the Media Cloud API.</p>
     </div>
   </div>
 
