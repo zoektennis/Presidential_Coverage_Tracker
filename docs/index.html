@@ -378,7 +378,31 @@
   </div>
 
   <script>
-    const posts = [];
+    const posts = [
+  {
+    id: 1,
+    date: "April 2026",
+    title: "How media consolidation is softening news coverage of Trump",
+    tag: "Analysis",
+    excerpt: "An analysis of broadcast transcripts shows CBS coverage of Trump became less critical after David Ellison took over as CEO of Paramount — a shift not seen at CNN or Fox News.",
+    content: `
+      <p>In July 2025, Paramount Global agreed to pay Donald Trump $16 million to settle a lawsuit over a "60 Minutes" interview with Kamala Harris. The legal claim was weak, and most experts agreed that CBS could have easily fought and likely won. But CBS settled — donating the money to Trump's future presidential library with no admission of wrongdoing, while Paramount sought FCC approval for a merger with Skydance Media.</p>
+      <p>In September 2025, ABC suspended production of Jimmy Kimmel Live over backlash surrounding comments Kimmel made regarding the murder of conservative activist Charlie Kirk — the same day FCC chairman Brendan Carr threatened punitive regulatory action against ABC. And just recently, Late Show host Stephen Colbert accused CBS of refusing to air his scheduled interview with Texas Democratic Senate candidate James Talarico, citing FCC equal-airtime rules.</p>
+      <p>Each case followed the same pattern: the government lobs a regulatory or political threat at a news network, and the network capitulates.</p>
+      <h3>Corporate ownership and the business calculus of broadcast news</h3>
+      <p>To understand why these networks backed down so readily, we must look at the ownership structure of broadcast media today. Most major broadcast networks are owned by a handful of giant parent companies for whom news is not the core profit engine, but a regulatory liability inside a much larger corporate empire. ABC News is just one division of Disney; CBS is a sliver of Paramount Global. When government threats arise, executives have little incentive to shield their news divisions — they're far more likely to protect the company's bigger, more profitable assets.</p>
+      <p>Parent companies seeking to merge with other companies also require approval from federal regulators, including the FCC. While the FCC is intended to operate as a nonpartisan body, under Trump's administration it has increasingly functioned as a lever of political influence — giving executives strong incentives to avoid antagonizing the very officials who must later approve their deals.</p>
+      <h3>CBS coverage softened following Ellison's takeover</h3>
+      <p>To answer whether regulatory pressure translates into the quality of news coverage, we examined CBS coverage before and after David Ellison took over Paramount and CBS in August 2025. We collected a year's worth of transcripts from CBS, ABC, CNN, and Fox News, broke them into blocks of a few sentences, and classified each block mentioning Trump as positive, negative, or neutral using a natural language inference model. We then calculated "net coverage" — the percent of positive minus negative blocks about Trump — and tracked how tone shifted at each outlet over time.</p>
+      <p>Before the Ellison takeover, net coverage of Trump on CBS was -13%. After the takeover, coverage significantly improved by roughly 5 percentage points to -8%. Neither CNN nor Fox saw this same softening. It is notable that ABC, which also faced FCC pressure around the same time, experienced a similar shift.</p>
+      <h3>Why CBS and ABC, but not Fox and CNN?</h3>
+      <p>Fox and CNN parent companies were not seeking mergers requiring FCC approval during this period — giving them less incentive to soften coverage. CBS and ABC, by contrast, were both entangled in regulatory processes. Paramount is now also seeking a new merger with Warner Bros Discovery, giving Ellison even more incentive to keep coverage of Trump favorable. If that merger is approved, placing CNN under Ellison's control, we might expect CNN coverage to become less critical too.</p>
+      <h3>The takeaway</h3>
+      <p>The business of broadcast news has a structural problem. A few parent companies own nearly every major outlet, and for them, news isn't a public service worth protecting. Their desire to shield other assets — and at times to expand their empires — leads them to capitulate to government threats. What results is a media that is more sympathetic to the government and the president.</p>
+      <p>One of the core functions of media in a democracy is to serve as a watchdog — to expose corruption and hold the government accountable. If media outlets do not report truthfully on government actions because doing so conflicts with their business interests, this entire chain of political accountability disappears.</p>
+    `
+  }
+];
 
     function showPage(page) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
